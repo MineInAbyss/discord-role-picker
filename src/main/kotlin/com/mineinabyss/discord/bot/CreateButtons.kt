@@ -84,7 +84,6 @@ class CreateButtons(
         event<SelectMenuInteractionCreateEvent> {
             action {
                 val comp = event.interaction.componentId
-                println("Interact $comp")
                 when {
                     comp.startsWith("select/") -> {
                         event.interaction.channel.createMessage {
@@ -108,7 +107,6 @@ class CreateButtons(
         event<ButtonInteractionCreateEvent> {
             action {
                 val comp = event.interaction.componentId
-                println("Interact $comp")
                 when {
                     comp.startsWith("roles/") -> {
                         val response = event.interaction.respondEphemeral {

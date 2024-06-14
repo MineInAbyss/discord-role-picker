@@ -1,0 +1,7 @@
+services:
+  discord-role-picker:
+    image: ghcr.io/mineinabyss/discord-role-picker
+    environment:
+      BOT_TOKEN: "YOUR_BOT_TOKEN"
+    volumes:
+      - ./config.yml:/app/config.yml

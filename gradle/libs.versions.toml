@@ -4,12 +4,14 @@ kaml = "0.60.0"
 kordExtensions = "1.8.1-SNAPSHOT"
 kotlin = "2.0.0"
 kotlinx-serialization = "1.7.0"
+slf4j = "2.0.9"
 
 [libraries]
 clikt = { module = "com.github.ajalt.clikt:clikt", version.ref = "clikt" }
 kaml = { module = "com.charleskorn.kaml:kaml", version.ref = "kaml" }
 kordExtensions = { module = "com.kotlindiscord.kord.extensions:kord-extensions", version.ref = "kordExtensions" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+slf4j = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
 
 [plugins]
 kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
