@@ -28,8 +28,13 @@ application {
     mainClass = "com.mineinabyss.discord.bot.MainKt"
 }
 
-tasks.jibDockerBuild {
-    dependsOn("jlinkJre")
+tasks {
+    jibDockerBuild {
+        dependsOn("jlinkJre")
+    }
+    this.jib {
+        dependsOn("jlinkJre")
+    }
 }
 
 jlinkJre {
@@ -42,7 +47,7 @@ jib {
     extraDirectories {
         paths {
             path {
-                setFrom(project.file("build/jlink-jre/jre"))
+                setFrom(file("build/jlink-jre/jre"))
                 into = "/usr/local"
             }
         }
