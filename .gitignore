@@ -1,0 +1,9 @@
+local
+.idea
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+.vscode/
+.DS_Store
