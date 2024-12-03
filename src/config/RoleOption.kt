@@ -1,4 +1,4 @@
-package com.mineinabyss.discord.config
+package config
 
 import dev.kord.common.entity.DiscordPartialEmoji
 import dev.kord.common.entity.Snowflake

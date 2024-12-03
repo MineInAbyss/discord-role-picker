@@ -1,4 +1,4 @@
-package com.mineinabyss.discord.config
+package config
 
 import dev.kord.common.entity.ButtonStyle
 import kotlinx.serialization.Serializable
