@@ -40,6 +40,12 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           cache: gradle
 
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/mineinabyss/discord-role-picker
+
       - name: Run native compile
         run: chmod +x gradlew && ./gradlew nativeCompile
 
@@ -49,4 +55,5 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: MineInAbyss/discord-role-picker
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
