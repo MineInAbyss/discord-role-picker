@@ -18,11 +18,7 @@ dependencies {
 }
 
 kotlin {
-    jvmToolchain(23) // want this for graalvm 23 despite kotlin not supporting yet
-}
-java {
-    sourceCompatibility = JavaVersion.VERSION_22
-    targetCompatibility = JavaVersion.VERSION_22
+    jvmToolchain(23)
 }
 
 sourceSets {
@@ -46,7 +42,7 @@ graalvmNative {
                 "-Os"
             )
             imageName.set("discord-role-picker")
-//            runtimeArgs.add("-Xmx10m")
+            runtimeArgs.add("-Xmx128m")
         }
     }
 }
